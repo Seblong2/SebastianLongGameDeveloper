@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import './portfolio.css';
 const github='https://github.com/Seblong2';
 const projects=[
- {title:'Destruction in Unity',repo:'Sebastian_Long_UnityDestruction_Dissertation',type:'Research',visual:'world',text:'A dissertation exploring voxel worlds, marching worlds, and interactive destruction in Unity. Setup and control notes are available in the repository.',tags:'Unity / Destruction / Dissertation'},
- {title:'Unity Inventory System',repo:'UnityInventorySystem',type:'Systems',visual:'items',text:'An inventory system project built in Unity. Explore the source repository for the implementation and project files.',tags:'Unity / Inventory / Systems'},
+ {title:'Destruction in Unity',repo:'Sebastian_Long_UnityDestruction_Dissertation',type:'Research',visual:'world',text:'A dissertation exploring voxel and marching cube algorithms, and interactive destruction in Unity. Setup and control notes are available in the repository.',tags:'Unity / Destruction / Dissertation'},
+ {title:'Unity Inventory System',repo:'UnityInventorySystem',type:'Systems',visual:'items',text:'A University project exploring and recreating inventory systems in unity',tags:'Unity / Inventory / Systems'},
  {title:'Project Dungeon',repo:'Project-Dungeon',type:'Games',visual:'dungeon',text:'A gameplay programming project. Browse the project repository to explore the code and development work.',tags:'Gameplay / Programming / Game project'}
 ];
 function Art({type}){return <div className={'art '+type} aria-hidden="true"><div className="grid"/>{Array.from({length:12},(_,i)=><i key={i} style={{'--x':i%4,'--y':Math.floor(i/4)}}/>)}<small>CONCEPT VISUAL</small><b>{type==='world'?'WORLD.DESTROY()':type==='items'?'INVENTORY.SYSTEM':'PROJECT.DUNGEON'}</b></div>}
